@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowser245 - Hub</title>
+    <style>
+        :root {
+            --bg-color: #1e1e2e;
+            --container-bg: #11111b;
+            --accent-color: #a6e3a1;
+            --text-color: #cdd6f4;
+            --text-muted: #a6adc8;
+            --card-bg: #181825;
+            --border-color: #313244;
+            --red: #f38ba8;
+            --blue: #89b4fa;
+            --mauve: #cba6f7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* En-tête profil */
+        .profile-header {
+            text-align: center;
+            padding: 60px 20px 40px 20px;
+            background-color: var(--container-bg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #ffffff;
+        }
+
+        .profile-header p {
+            margin: 10px 0 0 0;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Conteneur des projets */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: var(--mauve);
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        /* Grille ou Liste de projets */
+        .projects-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Carte Projet Phare (MC Launcher) */
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+        }
+
+        .project-info {
+            max-width: 70%;
+        }
+
+        .project-badge {
+            background-color: rgba(166, 227, 161, 0.1);
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .project-title {
+            margin: 0 0 8px 0;
+            font-size: 1.4rem;
+            color: #ffffff;
+        }
+
+        .project-desc {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Bouton d'action */
+        .project-btn {
+            display: inline-block;
+            background-color: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .project-btn:hover {
+            background-color: var(--accent-color);
+            color: #11111b;
+        }
+
+        /* Liens réseaux / footer */
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding: 30px 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .project-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            .project-info {
+                max-width: 100%;
+            }
+            .project-btn {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="profile-header">
+        <h1>Bowser245</h1>
+        <p>Dépôts de projets open source</p>
+    </header>
+
+    <div class="container">
+        <h2>🚀 Mes Projets</h2>
+
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="project-info">
+                    <span class="project-badge">Projet Principal</span>
+                    <h3 class="project-title">MC Launcher</h3>
+                    <p class="project-desc">Un launcher Minecraft optimisé en Python axé sur la performance, incluant l'allocation automatique de RAM à 75% ou un Kill Switch d'urgence intégré.</p>
+                </div>
+                <a href="./mc-opti" class="project-btn">Visiter le site</a>
+            </div>
+
+            </div>
+    </div>
+
+    <footer>
+        © 2026 Bowser245 — Propulsé par <a href="https://github.com/Bowser245" target="_blank">GitHub Pages</a>
+    </footer>
+
+</body>
+</html>
